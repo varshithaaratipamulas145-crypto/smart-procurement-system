@@ -1,0 +1,221 @@
+:root {
+  --green-primary: #1b6d4f;
+  --green-hover: #14533c;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+}
+
+/* Fullscreen Root Container */
+.fullscreen-login-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Outer Card becomes Full Width & Full Height */
+.login-card-container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Hero Section expands to top half of screen */
+.hero-banner {
+  flex: 1.2;
+  min-height: 45vh;
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+}
+
+.leaf-logo {
+  width: clamp(64px, 10vw, 96px);
+  height: clamp(64px, 10vw, 96px);
+  margin: 0 auto 16px auto;
+  color: #22c55e;
+}
+
+.main-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.sub-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: #475569;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Action Form Area fills bottom half and stays centered */
+.centered-action-area {
+  flex: 1;
+  padding: 40px 24px 60px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  background: #ffffff;
+}
+
+.prominent-buttons-group,
+.phone-entry-form,
+.language-section {
+  width: 100%;
+  max-width: 480px; /* Constrains inputs slightly for comfortable reading */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Large Full-Width Buttons */
+.btn-large {
+  width: 100%;
+  padding: 20px 28px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.btn-large:active {
+  transform: scale(0.99);
+}
+
+.btn-primary {
+  background: var(--green-primary);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--green-hover);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--green-primary);
+  border: 2px solid var(--green-primary);
+}
+
+.btn-secondary:hover {
+  background: #f0fdf4;
+}
+
+.btn-back-link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* Inputs */
+.phone-input-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.country-code {
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  border-right: 1px solid #cbd5e1;
+  background: #e2e8f0;
+}
+
+.mobile-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--text-dark);
+}
+
+.field-error {
+  color: #ef4444;
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Language Selection */
+.language-section {
+  text-align: center;
+}
+
+.lang-title {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.lang-pill-group {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.lang-pill {
+  flex: 1;
+  padding: 14px 0;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #334155;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lang-pill.active {
+  background: #e0f2fe;
+  border-color: #0284c7;
+  color: #0369a1;
+}

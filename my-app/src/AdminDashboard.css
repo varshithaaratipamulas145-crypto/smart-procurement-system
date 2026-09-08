@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a237e;
+}
+
+.admin-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.region-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #dbcece;
+  font-size: 0.9rem;
+}
+
+/* Metric Cards Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.metric-value {
+  margin: 8px 0 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.metric-card.success .metric-value { color: #2e7d32; }
+.metric-card.warning .metric-value { color: #f57c00; }
+.metric-card.danger .metric-value { color: #c62828; }
+
+/* Main Split Dashboard Grid */
+.admin-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 850px) {
+  .admin-main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.panel {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.panel h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Data Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  color: #666;
+  font-weight: 600;
+  background-color: #fafafa;
+}
+
+.status-pill {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.status-pill.normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-pill.heavy {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+/* Insights & Alerts */
+.alert-box {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.alert-box strong {
+  color: #e65100;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.alert-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #5d4037;
+}
+
+.section-title-spacing {
+  margin-top: 24px;
+}
+
+.alerts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alerts-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.8rem;
+}
+
+.alerts-list small {
+  color: #888;
+}
+/* Metric cards, table container, and insights container boxes */
+.metric-card,
+.status-table-container,
+.insights-container,
+.dashboard-card {
+  background-color: #f0fdf4 !important; /* Soft light green box fill */
+  border: 1px solid #bbf7d0 !important; /* Subtle green border */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure inner table elements maintain contrast against the light green box */
+.status-table-container table {
+  background: transparent;
+}
+
+.status-table-container th {
+  background-color: #dcfce7; /* Slightly darker green header row */
+  color: #166534;
+}
+/* Style the dropdown box */
+.region-select {
+  background-color: #f0fdf4 !important; /* Light green box fill */
+  border: 1px solid #bbf7d0 !important; /* Subtle green border */
+  color: #1e293b !important;            /* Dark readable text */
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Style the dropdown menu options */
+.region-select option {
+  background-color: #ffffff;
+  color: #1e293b;
+}

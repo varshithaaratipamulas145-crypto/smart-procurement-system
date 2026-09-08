@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-wrapper {
+  width: 92%;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #0d47a1;
+}
+
+.dashboard-header p {
+  margin: 4px 0 20px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Mobile: Single Column */
+.responsive-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0d47a1;
+}
+
+.action-btn {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2ss ease;
+}
+
+.action-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Tablet and Desktop: 2-Column Grid */
+@media (min-width: 640px) {
+  .responsive-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
